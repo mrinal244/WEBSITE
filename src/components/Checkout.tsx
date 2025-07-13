@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, CreditCard, Truck, Shield } from 'lucide-react';
 import { useCart } from '../context/CartContext';
+import { createOrder } from '../services/orderService';
 
 const Checkout = () => {
   const { state, dispatch } = useCart();
@@ -30,13 +31,41 @@ const Checkout = () => {
     e.preventDefault();
     setIsProcessing(true);
 
-    // Simulate payment processing
-    setTimeout(() => {
-      alert('Order placed successfully! You will receive a confirmation email shortly.');
-      dispatch({ type: 'CLEAR_CART' });
-      navigate('/');
+    try {
+      // Create order in database
+      const orderData = {
+        customerEmail: formData.email,
+        customerName: `${formData.firstName} ${formData.lastName}`,
+        customerPhone: formData.phone,
+        shippingAddress: {
+          address: formData.address,
+          city: formData.city,
+          state: formData.state,
+          pincode: formData.pincode
+        },
+        paymentMethod: formData.paymentMethod,
+        items: state.items,
+        totalAmount: finalTotal
+      };
+
+      const result = await createOrder(orderData);
+
+      if (result.success) {
+        // Simulate payment processing
+        setTimeout(() => {
+          alert(`Order placed successfully! Order ID: ${result.orderId}\nYou will receive a confirmation email shortly.`);
+          dispatch({ type: 'CLEAR_CART' });
+          navigate('/');
+          setIsProcessing(false);
+        }, 2000);
+      } else {
+        throw new Error(result.error || 'Failed to create order');
+      }
+    } catch (error) {
+      console.error('Order creation failed:', error);
+      alert('Failed to place order. Please try again.');
       setIsProcessing(false);
-    }, 2000);
+    }
   };
 
   if (state.items.length === 0) {
