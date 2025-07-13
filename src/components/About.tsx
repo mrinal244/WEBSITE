@@ -8,30 +8,29 @@ const About = () => {
           <div className="order-2 lg:order-1">
             <h2 className="text-4xl md:text-5xl font-serif text-amber-900 mb-6">Our Story</h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              For over two decades, we have been weaving stories of elegance and grace through our designs. 
-              Our journey began with a simple belief that every woman deserves to feel beautiful, confident, 
-              and authentically herself.
+              For over 15 years, we have been redefining fashion from the vibrant city of Jaipur, blending royal heritage with modern elegance. What began as a passion for design has grown into a trusted name in personalized, stylish, and designer wear that speaks to the individuality of every woman.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              From traditional silhouettes to contemporary interpretations, each piece in our collection 
-              reflects our commitment to exceptional craftsmanship, sustainable practices, and the 
-              celebration of feminine strength.
+              Each creation is a celebration of craftsmanship — from timeless traditional silhouettes to bold contemporary styles — all thoughtfully curated to reflect grace, strength, and your unique story.
+            </p>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Whether it's custom tailoring, statement ensembles, or sustainable luxury, our pieces are designed to make you feel confident, radiant, and unapologetically yourself.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-serif font-bold text-amber-900 mb-2">25+</div>
+                <div className="text-3xl font-serif font-bold text-amber-900 mb-2">15+</div>
                 <div className="text-gray-600">Years of Excellence</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-serif font-bold text-amber-900 mb-2">100+</div>
-                <div className="text-gray-600">Global Stores</div>
+                <div className="text-3xl font-serif font-bold text-amber-900 mb-2">500+</div>
+                <div className="text-gray-600">Happy Customers</div>
               </div>
             </div>
           </div>
           <div className="order-1 lg:order-2">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/3965557/pexels-photo-3965557.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop"
+                src="https://www.anitadongre.com/on/demandware.static/-/Sites-AD-INDIA-Library/default/dwbbc9085b/images/Home%20page/Apr2024/NewHomepage/Book_An_appointment_New%20Home%20page%20AD26april2024.jpg"
                 alt="Designer Story"
                 className="w-full h-96 lg:h-[500px] object-cover rounded-lg shadow-lg"
               />

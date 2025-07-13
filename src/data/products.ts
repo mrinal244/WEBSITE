@@ -9,9 +9,9 @@ export const products: Product[] = [
     description: 'A flowing masterpiece that embodies grace and sophistication. This ethereal drape dress features delicate pleating and a flattering silhouette that moves beautifully with every step.',
     category: 'Dresses',
     images: [
-      'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/3965548/pexels-photo-3965548.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
+      'https://images.pexels.com/photos/8839887/pexels-photo-8839887.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839888/pexels-photo-8839888.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839889/pexels-photo-8839889.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: ['Ivory', 'Blush Pink', 'Sage Green'],
@@ -32,9 +32,9 @@ export const products: Product[] = [
     description: 'An exquisite bridal lehenga featuring intricate hand embroidery with gold threads, sequins, and pearls. This masterpiece represents the pinnacle of Indian craftsmanship.',
     category: 'Bridal',
     images: [
-      'https://images.pexels.com/photos/3754260/pexels-photo-3754260.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/3754253/pexels-photo-3754253.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/9570531/pexels-photo-9570531.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
+      'https://images.pexels.com/photos/8839890/pexels-photo-8839890.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839891/pexels-photo-8839891.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839892/pexels-photo-8839892.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
     colors: ['Deep Red', 'Royal Blue', 'Emerald Green', 'Gold'],
@@ -55,9 +55,9 @@ export const products: Product[] = [
     description: 'A modern interpretation of the classic saree, featuring contemporary prints and a pre-stitched design for effortless draping.',
     category: 'Traditional',
     images: [
-      'https://images.pexels.com/photos/9570531/pexels-photo-9570531.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/3754210/pexels-photo-3754210.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
+      'https://images.pexels.com/photos/8839893/pexels-photo-8839893.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839894/pexels-photo-8839894.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839895/pexels-photo-8839895.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
     ],
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Navy Blue', 'Burgundy', 'Forest Green', 'Black'],
@@ -78,9 +78,9 @@ export const products: Product[] = [
     description: 'Clean lines and contemporary cuts define this minimalist kurta set. Perfect for the modern woman who appreciates understated elegance.',
     category: 'Ready to Wear',
     images: [
-      'https://images.pexels.com/photos/3965548/pexels-photo-3965548.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/1040945/pexels-photo-1040945.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
+      'https://images.pexels.com/photos/8839896/pexels-photo-8839896.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839897/pexels-photo-8839897.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839898/pexels-photo-8839898.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: ['White', 'Cream', 'Light Blue', 'Mint Green'],
@@ -101,9 +101,9 @@ export const products: Product[] = [
     description: 'Flowing palazzo pants paired with an intricately designed kurta. This set combines comfort with high fashion for the perfect day-to-evening look.',
     category: 'Contemporary',
     images: [
-      'https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/3965548/pexels-photo-3965548.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
+      'https://images.pexels.com/photos/8839899/pexels-photo-8839899.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839900/pexels-photo-8839900.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839901/pexels-photo-8839901.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
     ],
     sizes: ['S', 'M', 'L', 'XL'],
     colors: ['Coral', 'Lavender', 'Mustard', 'Teal'],
@@ -124,9 +124,9 @@ export const products: Product[] = [
     description: 'A regal Anarkali suit that captures the essence of royal Indian fashion. Features intricate embroidery and a flowing silhouette.',
     category: 'Festive',
     images: [
-      'https://images.pexels.com/photos/3754253/pexels-photo-3754253.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/3754260/pexels-photo-3754260.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
-      'https://images.pexels.com/photos/9570531/pexels-photo-9570531.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
+      'https://images.pexels.com/photos/8839902/pexels-photo-8839902.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839903/pexels-photo-8839903.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+      'https://images.pexels.com/photos/8839904/pexels-photo-8839904.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop'
     ],
     sizes: ['XS', 'S', 'M', 'L', 'XL'],
     colors: ['Magenta', 'Royal Purple', 'Golden Yellow', 'Peacock Blue'],
