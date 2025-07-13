@@ -1,11 +1,23 @@
-import { createClient } from '@supabase/supabase-js';
+// Mock Supabase client for demo purposes
+export const supabase = {
+  from: () => ({
+    insert: () => ({
+      select: () => ({
+        single: () => Promise.resolve({ data: null, error: null })
+      })
+    }),
+    select: () => ({
+      eq: () => ({
+        single: () => Promise.resolve({ data: null, error: null })
+      })
+    }),
+    update: () => ({
+      eq: () => Promise.resolve({ error: null })
+    })
+  })
+};
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://xyzcompany.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBsYWNlaG9sZGVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NDUxOTI4MDAsImV4cCI6MTk2MDc2ODgwMH0.placeholder';
-
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
-
-// Database types
+// Mock database types
 export interface Order {
   id: string;
   customer_email: string;

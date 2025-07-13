@@ -1,4 +1,4 @@
-import { supabase } from '../lib/supabase';
+// Mock order service without Supabase dependency
 import { CartItem } from '../types/product';
 
 export interface OrderData {
@@ -18,83 +18,47 @@ export interface OrderData {
 
 export const createOrder = async (orderData: OrderData) => {
   try {
-    // Create the order
-    const { data: order, error: orderError } = await supabase
-      .from('orders')
-      .insert({
-        customer_email: orderData.customerEmail,
-        customer_name: orderData.customerName,
-        customer_phone: orderData.customerPhone,
-        shipping_address: orderData.shippingAddress,
-        total_amount: orderData.totalAmount,
-        payment_method: orderData.paymentMethod,
-        payment_status: 'pending',
-        order_status: 'pending'
-      })
-      .select()
-      .single();
-
-    if (orderError) throw orderError;
-
-    // Create order items
-    const orderItems = orderData.items.map(item => ({
-      order_id: order.id,
-      product_id: item.product.id,
-      product_name: item.product.name,
-      product_price: item.product.price,
-      quantity: item.quantity,
-      selected_size: item.selectedSize,
-      selected_color: item.selectedColor
-    }));
-
-    const { error: itemsError } = await supabase
-      .from('order_items')
-      .insert(orderItems);
-
-    if (itemsError) throw itemsError;
-
-    return { success: true, orderId: order.id };
+    // Simulate order creation without database
+    const orderId = 'ORDER_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+    
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    // Log order for demo purposes
+    console.log('Order created:', { orderId, ...orderData });
+    
+    return { success: true, orderId };
   } catch (error) {
     console.error('Error creating order:', error);
-    return { success: false, error: error.message };
+    return { success: false, error: 'Failed to create order' };
   }
 };
 
 export const getOrderById = async (orderId: string) => {
   try {
-    const { data: order, error: orderError } = await supabase
-      .from('orders')
-      .select(`
-        *,
-        order_items (*)
-      `)
-      .eq('id', orderId)
-      .single();
-
-    if (orderError) throw orderError;
+    // Mock order data
+    const order = {
+      id: orderId,
+      customer_email: 'customer@example.com',
+      customer_name: 'Demo Customer',
+      total_amount: 25000,
+      order_status: 'confirmed',
+      created_at: new Date().toISOString()
+    };
 
     return { success: true, order };
   } catch (error) {
     console.error('Error fetching order:', error);
-    return { success: false, error: error.message };
+    return { success: false, error: 'Failed to fetch order' };
   }
 };
 
 export const updatePaymentStatus = async (orderId: string, status: 'completed' | 'failed') => {
   try {
-    const { error } = await supabase
-      .from('orders')
-      .update({ 
-        payment_status: status,
-        order_status: status === 'completed' ? 'confirmed' : 'pending'
-      })
-      .eq('id', orderId);
-
-    if (error) throw error;
-
+    console.log('Payment status updated:', { orderId, status });
     return { success: true };
   } catch (error) {
     console.error('Error updating payment status:', error);
-    return { success: false, error: error.message };
+    return { success: false, error: 'Failed to update payment status' };
   }
 };
